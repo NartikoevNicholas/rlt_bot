@@ -37,11 +37,17 @@ https://drive.google.com/file/d/1pcNm2TAtXHO4JIad9dkzpbNc4q7NoYkx/view?usp=shari
   
 ### Установка и запуск(linux)  
 1. Создание виртуального окружения. Прописать в командной строке:
+
 `cp .env.example .env` 
+
 и в файле .env указать свой `TELEGRAM_TOKEN=` 
+
 2. Поднять docker-compose.  Прописать в командной строке:
+
 `docker-compose -f docker-compose.yml up -d --remove-orphans`
+
 3. Импортировать дамп базы данных. Проприсать в командной строке:
+
 `docker exec -i mongodb /usr/bin/mongorestore --uri "mongodb://test:test@mongodb:27017/test" --drop /var/backups/sampleDB`
   
 ## Реализация
