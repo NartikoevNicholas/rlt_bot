@@ -53,6 +53,6 @@ https://drive.google.com/file/d/1pcNm2TAtXHO4JIad9dkzpbNc4q7NoYkx/view?usp=shari
 `docker exec -i mongodb /usr/bin/mongorestore --uri "mongodb://test:test@mongodb:27017/test" --drop /var/backups/sampleDB`
   
 ## Реализация
-Проект реализовал на языке Python. Проект расположен в папке src. 
+Проект реализовал на языке Python. Проект расположен в папке src, точка входа в приложение файл main.py. 
 При реализации проекта использовал паттерн clean architecture.
 
