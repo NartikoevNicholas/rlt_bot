@@ -24,7 +24,7 @@ async def echo_handler(
     try:
         data = AggregateSalaryRequest(**json.loads(message.text))
         dataset = await employee_use_case.aggregate_salary(data)
-        await message.answer(str(dataset.model_dump()))
+        await message.answer(json.dumps(dataset.model_dump()))
     except Exception as e:
         await message.answer("Bad request")
         raise e
